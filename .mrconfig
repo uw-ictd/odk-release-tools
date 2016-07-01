@@ -1,0 +1,109 @@
+[DEFAULT]
+demo = git checkout demo
+master = git checkout master
+jni = git checkout dev-jni
+versionTags = git push --tags
+update = git pull --rebase
+
+
+[workspace/odk/androidlibrary]
+checkout = git@github.com:opendatakit/androidlibrary.git
+tip = git checkout development
+versionBump = git add settings.gradle
+  git commit -m "Update Gradle Config: version code bump"
+  git pull --rebase
+mergeDemo = git checkout demo
+  git pull
+  git merge --no-ff --no-edit development
+mergeMaster = git checkout master
+  git pull
+  git merge --no-ff --no-edit demo
+
+[workspace/odk/androidcommon]
+checkout = git@github.com:opendatakit/androidcommon.git
+tip = git checkout development
+versionBump = git add settings.gradle
+  git commit -m "Update Gradle Config: version code bump"
+  git pull --rebase
+mergeDemo = git checkout demo
+  git pull
+  git merge --no-ff --no-edit development
+mergeMaster = git checkout master
+  git pull
+  git merge --no-ff --no-edit demo
+
+[workspace/odk/services]
+checkout = git@github.com:opendatakit/services.git
+tip = git checkout development
+versionBump = git add settings.gradle
+  git commit -m "Update Gradle Config: version code bump"
+  git pull --rebase
+mergeDemo = git checkout demo
+  git pull
+  git merge --no-ff --no-edit development
+mergeMaster = git checkout master
+  git pull
+  git merge --no-ff --no-edit demo
+
+[workspace/odk/scan]
+checkout = git@github.com:opendatakit/scan.git
+tip = git checkout development
+versionBump = git add settings.gradle
+  git commit -m "Update Gradle Config: version code bump"
+  git pull --rebase
+mergeDemo = git checkout demo
+  git pull
+  git merge --no-ff --no-edit development
+mergeMaster = git checkout master
+  git pull
+  git merge --no-ff --no-edit demo
+
+[workspace/odk/survey]
+checkout = git@github.com:opendatakit/survey.git
+tip = git checkout development
+versionBump = git add settings.gradle
+  git commit -m "Update Gradle Config: version code bump"
+  git pull --rebase
+mergeDemo = git checkout demo
+  git pull
+  git merge --no-ff --no-edit development
+mergeMaster = git checkout master
+  git pull
+  git merge --no-ff --no-edit demo
+
+[workspace/odk/tables]
+checkout = git@github.com:opendatakit/tables.git
+tip = git checkout development
+versionBump = git add settings.gradle
+  git commit -m "Update Gradle Config: version code bump"
+  git pull --rebase
+mergeDemo = git checkout demo
+  git pull
+  git merge --no-ff --no-edit development
+mergeMaster = git checkout master
+  git pull
+  git merge --no-ff --no-edit demo
+
+[workspace/odk/sensors]
+checkout = git@github.com:opendatakit/sensors.git
+tip = git checkout development
+versionBump = git add settings.gradle
+  git commit -m "Update Gradle Config: version code bump"
+  git pull --rebase
+mergeDemo = git checkout demo
+  git pull
+  git merge --no-ff --no-edit development
+mergeMaster = git checkout master
+  git pull
+  git merge --no-ff --no-edit demo
+
+[workspace/odk/gradle-config]
+checkout = git@github.com:opendatakit/gradle-config.git
+tip = git checkout master
+
+[workspace/odk/app-designer]
+checkout = git@github.com:opendatakit/app-designer.git
+tip = git checkout development
+mergeDemo = git checkout demo
+  git pull
+  git merge --no-ff --no-edit development
